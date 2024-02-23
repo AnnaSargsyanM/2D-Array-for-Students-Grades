@@ -34,7 +34,7 @@ int main()
 	int testNumber = 8,
 		studentNumber = 1;
 	double average = 0;
-	const string fileName = "Assignment1Data.txt";
+	const string fileName = "GradesData.txt";
 
 	readTestScores(fileName, scores, NUMSTDS);
 	displayTestScores(scores, NUMSTDS);
@@ -113,7 +113,7 @@ int main()
 void readTestScores(const string& fileName, int scores[][NUM_TESTS], 
 	int NUMSTDS)
 {
-	ifstream Assignment1_file(fileName);
+	ifstream GradesData_file(fileName);
 
 	if (!Assignment1_file) 
 	{
@@ -128,13 +128,13 @@ void readTestScores(const string& fileName, int scores[][NUM_TESTS],
 			if (!(Assignment1_file >> scores[i][j])) 
 			{
 				cout << "Failed to read data from file " << fileName << endl;
-				Assignment1_file.close();
+				GradesData_file.close();
 				return;
 			}
 		}
 	}
 
-	Assignment1_file.close();
+	GradesData_file.close();
 }
 
 
