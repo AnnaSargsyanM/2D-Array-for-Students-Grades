@@ -115,7 +115,7 @@ void readTestScores(const string& fileName, int scores[][NUM_TESTS],
 {
 	ifstream GradesData_file(fileName);
 
-	if (!Assignment1_file) 
+	if (!GradesData_file) 
 	{
 		cout << "Unable to open file " << fileName << endl;
 		return;
@@ -125,7 +125,7 @@ void readTestScores(const string& fileName, int scores[][NUM_TESTS],
 	{
 		for (int j = 0; j < NUM_TESTS; j++) 
 		{
-			if (!(Assignment1_file >> scores[i][j])) 
+			if (!(GradesData_file >> scores[i][j])) 
 			{
 				cout << "Failed to read data from file " << fileName << endl;
 				GradesData_file.close();
